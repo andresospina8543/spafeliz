@@ -1,0 +1,24 @@
+<div class="jumbotron">
+  <h1>Spa Feliz</h1>
+  <p class="lead">
+    <img src="https://pur.vamtam.com/wp-content/uploads/2017/11/parallax4.jpg" style="padding-left: 0; height: 400px; width: 800px;" alt="I'm Yeoman"><br>
+    Always a pleasure scaffolding your apps.
+  </p>
+  <p><a class="btn btn-lg btn-success" ng-href="#/">Splendid!<span class="glyphicon glyphicon-ok"></span></a></p>
+</div>
+
+<div class="row marketing">
+  <h4>My nombre es: </h4>
+  <p>
+    {{vm.myNombre}}
+  </p>
+
+  <h4>Servicios ofrecidos:</h4>
+  <div ng-repeat="item in vm.serviceList">
+
+    {{item.name}}
+  </div>
+
+  <h4>Karma</h4>
+  <p>Spectacular Test Runner for JavaScript.</p>
+</div>
