@@ -14,9 +14,9 @@
   </p>
 
   <h4>Servicios ofrecidos:</h4>
-  <div ng-repeat="item in vm.serviceList">
-
-    {{item.name}}
+  <div  ng-repeat="item in vm.serviceList">
+   <a ui-sref="home.detail({id: item.id})">{{item.name}}</a>
+    
   </div>
 
   <h4>Karma</h4>

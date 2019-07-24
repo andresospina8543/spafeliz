@@ -25,10 +25,18 @@ function settings($stateProvider){
         templateUrl: 'views/about.html'
     };
 
+    var serviceDetail = {
+        name: 'home.detail',
+        url: '/detail/{id}',
+        templateUrl: 'views/detail.html',
+        controller: 'DetailCtrl as vm'
+    };
+
     //crear un state detail con su html y su controlador
 
     $stateProvider.state(homeState);
     $stateProvider.state(mainState);
     $stateProvider.state(aboutState);
+    $stateProvider.state(serviceDetail);
     
 }
