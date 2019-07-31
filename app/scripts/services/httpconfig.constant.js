@@ -11,6 +11,9 @@ angular.module('spafelizApp')
   .constant('httpConfig', {
     url: 'http://localhost:3001/',
     services:{
-      all: 'services/'
+      all: 'services/'      
+    },
+    book:{
+      registrar: 'book/registrar'
     }
   });

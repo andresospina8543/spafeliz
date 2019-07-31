@@ -2,9 +2,9 @@
 
 angular.module('spafelizApp').config(settings);
 
-settings.$inject = ['$stateProvider'];
+settings.$inject = ['$stateProvider', '$urlRouterProvider'];
 
-function settings($stateProvider){
+function settings($stateProvider, $urlRouterProvider){
 
     var homeState = {
         abstract: true,
@@ -25,11 +25,18 @@ function settings($stateProvider){
         templateUrl: 'views/about.html'
     };
 
-    var serviceDetail = {
+    var detailState = {
         name: 'home.detail',
         url: '/detail/{id}',
         templateUrl: 'views/detail.html',
         controller: 'DetailCtrl as vm'
+    };
+
+    var bookState = {
+        name: 'home.book',
+        url: '/book',
+        templateUrl: 'views/book.html',
+        controller: 'BookCtrl as vm'
     };
 
     //crear un state detail con su html y su controlador
@@ -37,6 +44,9 @@ function settings($stateProvider){
     $stateProvider.state(homeState);
     $stateProvider.state(mainState);
     $stateProvider.state(aboutState);
-    $stateProvider.state(serviceDetail);
+    $stateProvider.state(detailState);
+    $stateProvider.state(bookState);
+
+    $urlRouterProvider.when('','/');
     
 }

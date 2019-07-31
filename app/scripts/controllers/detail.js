@@ -20,7 +20,6 @@ angular.module('spafelizApp')
 
     function onInit(){
         vm.loadServiceDetail();
-
     }
 
     function loadServiceDetail(){
@@ -34,6 +33,6 @@ angular.module('spafelizApp')
         });
     }
 
-    console.log('state value', $state.params.id);
+    //console.log('state value', $state.params.id);
 
 }
